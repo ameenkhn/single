@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <filter id="shadow2" x="0" y="0" width="200%" height="200%">
+      <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#1E1B4B" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg2)"/>
+  <rect x="140" y="110" width="1640" height="860" rx="34" fill="#FFFFFF" filter="url(#shadow2)"/>
+
+  <text x="220" y="220" fill="#0F172A" font-size="56" font-family="Inter, Arial, sans-serif" font-weight="800">Funnel + Attribution Suite</text>
+  <text x="220" y="272" fill="#475569" font-size="30" font-family="Inter, Arial, sans-serif">Landing pages, offer positioning, CRM and conversion flow tracking</text>
+
+  <rect x="220" y="330" width="470" height="540" rx="24" fill="#EEF2FF" stroke="#C7D2FE"/>
+  <text x="260" y="392" fill="#312E81" font-size="30" font-family="Inter, Arial, sans-serif" font-weight="700">Traffic</text>
+  <rect x="260" y="430" width="390" height="76" rx="16" fill="#FFFFFF"/>
+  <text x="292" y="478" fill="#0F172A" font-size="32" font-family="Inter, Arial, sans-serif" font-weight="700">42,500 visits</text>
+  <rect x="260" y="528" width="390" height="76" rx="16" fill="#FFFFFF"/>
+  <text x="292" y="576" fill="#0F172A" font-size="32" font-family="Inter, Arial, sans-serif" font-weight="700">8,210 leads</text>
+  <rect x="260" y="626" width="390" height="76" rx="16" fill="#FFFFFF"/>
+  <text x="292" y="674" fill="#0F172A" font-size="32" font-family="Inter, Arial, sans-serif" font-weight="700">2,180 sales</text>
+  <rect x="260" y="724" width="390" height="76" rx="16" fill="#FFFFFF"/>
+  <text x="292" y="772" fill="#0F172A" font-size="32" font-family="Inter, Arial, sans-serif" font-weight="700">ROAS 4.65x</text>
+
+  <path d="M740 468 L928 468" stroke="#94A3B8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M740 566 L928 566" stroke="#94A3B8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M740 664 L928 664" stroke="#94A3B8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M740 762 L928 762" stroke="#94A3B8" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="928,448 968,468 928,488" fill="#4F46E5"/>
+  <polygon points="928,546 968,566 928,586" fill="#4F46E5"/>
+  <polygon points="928,644 968,664 928,684" fill="#4F46E5"/>
+  <polygon points="928,742 968,762 928,782" fill="#4F46E5"/>
+
+  <rect x="1020" y="330" width="670" height="540" rx="24" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="1060" y="392" fill="#0F172A" font-size="30" font-family="Inter, Arial, sans-serif" font-weight="700">Attribution Dashboard</text>
+  <rect x="1060" y="430" width="590" height="360" rx="18" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <path d="M1100 742 L1608 742" stroke="#CBD5E1" stroke-width="2"/>
+  <path d="M1100 680 L1608 680" stroke="#E2E8F0" stroke-width="1.4" stroke-dasharray="5 8"/>
+  <path d="M1100 618 L1608 618" stroke="#E2E8F0" stroke-width="1.4" stroke-dasharray="5 8"/>
+  <path d="M1100 556 L1608 556" stroke="#E2E8F0" stroke-width="1.4" stroke-dasharray="5 8"/>
+  <path d="M1120 708 C1200 676 1280 690 1362 640 C1438 594 1518 620 1590 562" stroke="#4F46E5" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M1120 726 C1200 712 1280 714 1362 696 C1438 680 1518 684 1590 668" stroke="#10B981" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <circle cx="1590" cy="562" r="9" fill="#4F46E5"/>
+  <circle cx="1590" cy="668" r="9" fill="#10B981"/>
+  <text x="1060" y="844" fill="#475569" font-size="24" font-family="Inter, Arial, sans-serif">Realtime attribution from first click to purchase</text>
+</svg>

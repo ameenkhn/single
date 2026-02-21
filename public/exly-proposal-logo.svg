@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="56" viewBox="0 0 320 56" fill="none" preserveAspectRatio="xMinYMid meet">
+  <rect x="2" y="2" width="52" height="52" rx="12" fill="#4A42B1" />
+  <text
+    x="28"
+    y="31"
+    fill="#F8FAFC"
+    font-family="Inter, Arial, sans-serif"
+    font-size="14"
+    font-weight="800"
+    letter-spacing="-0.03em"
+    text-anchor="middle"
+    dominant-baseline="middle"
+  >
+    Exly
+  </text>
+  <text x="70" y="23" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="0.18em">
+    EXLY
+  </text>
+  <text x="70" y="44" fill="#374151" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600">
+    Growth Partnership
+  </text>
+</svg>
