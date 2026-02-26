@@ -67,9 +67,18 @@ const proposalTitle = "Meta Ads Growth Partnership";
 const proposalTitleWithBrand = "Exly | Meta Ads Growth Partnership";
 
 const coverParagraphs = [
-  "You hire agencies to scale. You increase ad budgets. Then come extra costs - funnels, CRM, automation, creatives, tracking. And on top of that, they take a percentage of your revenue.",
-  "So even when you grow, you don't really grow. The more you scale, the more you give away. Your profits shrink while agency fees rise.",
-  "Exly Growth works differently. Zero revenue share. One fixed fee. No hidden cuts. We handle ads, landing pages, CRM, automation, payments, and reporting - so you scale your business, not your agency's income.",
+  {
+    text: "You hire agencies to scale. You increase ad budgets. Then come extra costs - funnels, CRM, automation, creatives, tracking. And on top of that, they take a percentage of your revenue.",
+    highlights: [],
+  },
+  {
+    text: "So even when you grow, you don't really grow. The more you scale, the more you give away. Your profits shrink while agency fees rise.",
+    highlights: ["don't really grow", "profits shrink", "agency fees rise"],
+  },
+  {
+    text: "Exly Growth works differently. Zero revenue share. One fixed fee. No hidden cuts. We handle ads, landing pages, CRM, automation, payments, and reporting - so you scale your business, not your agency's income.",
+    highlights: [],
+  },
 ];
 
 const heroServiceCards = [
@@ -933,6 +942,53 @@ function MagneticButton({ children, className = "", ...props }) {
         style={{ opacity: glowOpacity }}
       />
     </motion.button>
+  );
+}
+
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function AnimatedUnderlinePhrase({ children, liteMotion = false, delay = 0 }) {
+  const reducedMotion = useReducedMotion();
+  const shouldAnimate = !liteMotion && !reducedMotion;
+
+  return (
+    <span className="relative inline-block px-[1px] font-semibold text-[#3F46C6]">
+      {children}
+      <motion.span
+        className="pointer-events-none absolute inset-x-0 bottom-[0.05em] h-[2px] rounded-full bg-gradient-to-r from-indigo-400 via-indigo-500 to-indigo-400"
+        animate={shouldAnimate ? { scaleX: [0.6, 1, 0.68], opacity: [0.55, 1, 0.55] } : { scaleX: 1, opacity: 0.82 }}
+        transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut", delay }}
+        style={{ transformOrigin: "left center" }}
+      />
+    </span>
+  );
+}
+
+function HighlightedQuoteText({ text, highlights = [], liteMotion = false }) {
+  if (!highlights.length) return <>{text}</>;
+
+  const sorted = [...highlights].sort((a, b) => b.length - a.length);
+  const pattern = new RegExp(`(${sorted.map(escapeRegExp).join("|")})`, "gi");
+  const parts = text.split(pattern).filter(Boolean);
+
+  let highlightIndex = 0;
+  return (
+    <>
+      {parts.map((part, index) => {
+        const matched = sorted.find((item) => item.toLowerCase() === part.toLowerCase());
+        if (!matched) return <span key={`text-${index}`}>{part}</span>;
+
+        const delay = (highlightIndex % 5) * 0.16;
+        highlightIndex += 1;
+        return (
+          <AnimatedUnderlinePhrase key={`hl-${index}-${part}`} liteMotion={liteMotion} delay={delay}>
+            {part}
+          </AnimatedUnderlinePhrase>
+        );
+      })}
+    </>
   );
 }
 
@@ -3094,8 +3150,10 @@ function DefaultCover({ liteMotion = false, compact = false }) {
       </motion.div>
       <div className="mt-8 space-y-4">
         {coverParagraphs.map((paragraph) => (
-          <motion.p key={paragraph} variants={revealItem} className="text-sm leading-relaxed text-[#6B7280] sm:text-[15px]">
-            {paragraph}
+          <motion.p key={paragraph.text} variants={revealItem} className="text-sm leading-relaxed text-[#5B6477] italic sm:text-[15px]">
+            "
+            <HighlightedQuoteText text={paragraph.text} highlights={paragraph.highlights} liteMotion={liteMotion} />
+            "
           </motion.p>
         ))}
       </div>
